@@ -61,7 +61,7 @@ const Hero = () => {
             </div>
             {/*headline contents */}
             <div className="space-y-10">
-              <h1 className="animate-fade-700 bg-gradient-to-r from-purple-800 via-blue-200 to-white bg-clip-text text-transparent text-5xl md:text-6xl lg:text-7xl font-bold tracking-wider">
+              <h1 className="animate-fade-700 bg-gradient-to-r from-purple-800 via-blue-200 to-white bg-clip-text text-transparent text-4xl md:text-4xl lg:text-5xl font-bold tracking-wider">
                 Full-Stack <br />
                 <span className="font-serif italic tracking-tight font-normal  text-white">
                   Web Developer

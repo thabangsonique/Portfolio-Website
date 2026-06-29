@@ -46,7 +46,7 @@ export const Experience = () => {
       {/* EXPERIENCE TIMELINE */}
       <div className="relative mt-20">
         {/* timeline-line effect */}
-        <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-purple-900 via-purple-900/50 to-transparent" />
+        <div className="absolute  left-1/2 top-0 bottom-0 md:w-[2px] bg-gradient-to-b from-purple-900 via-purple-900/50 to-transparent" />
         <div className="md:flex md:flex-col gap-8 ">
           {experiences.map((exp, idx) => (
             <div
