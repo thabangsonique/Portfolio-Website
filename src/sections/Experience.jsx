@@ -22,7 +22,7 @@ export const Experience = () => {
   return (
     <section
       id="experience"
-      className=" relative mx-auto overflow-hidden px-6 md:px-30 pb-20"
+      className=" relative mx-auto container overflow-hidden px-6 md:px-30 pb-20"
     >
       {/* BACKGROUND */}
       <div className="absolute top-100 left-80 w-100 h-100 rounded-full blur-3xl bg-purple-900/30" />

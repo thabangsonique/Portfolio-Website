@@ -235,6 +235,8 @@ export const Contact = () => {
               )}
             </form>
           </div>
+
+          {/* Right side */}
           {/* contact information */}
 
           <div className="container relative mx-auto">

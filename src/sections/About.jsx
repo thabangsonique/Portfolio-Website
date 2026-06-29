@@ -39,11 +39,15 @@ const highlights = [
 
 export const About = () => {
   return (
-    <section id="about" className="py-32 relative container overflow-hidden">
+    <section
+      id="about"
+      className="py-32 mx-auto relative container overflow-hidden"
+    >
       {/* BACKGROUND */}
       <div className="absolute top-20 left-0 w-64 h-64 rounded-full bg-purple-900/40 blur-3xl" />
       <div className="absolute top-80 right-30 w-100 h-100 bg-purple-900/10 blur-3xl" />
-      <div className="container mx-auto px-6 md:px-30 relative grid md:grid-cols-2 gap-20">
+
+      <div className=" mx-auto px-6 md:px-20 grid md:grid-cols-2 gap-20">
         {/* Left section */}
         <div className="space-y-10">
           {" "}
