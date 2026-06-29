@@ -35,11 +35,6 @@ const Hero = () => {
       id="hero"
       className="relative overflow-hidden items-center min-h-screen"
     >
-      {/* bg */}
-      {/* <div className="absolute inset-0">
-        <img src="/space.jpg" className="w-full h-full object-cover" />
-      </div> */}
-      {/* gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background/40" />
       {/* green dots */}
       <div className="absolute inset-0 pointer-events-none">
@@ -57,10 +52,10 @@ const Hero = () => {
         ))}
       </div>
       {/* Contents */}
-      <div className="container relative mx-auto px-20 pt-40">
+      <div className="container relative mx-auto px-6 md:px-20 pt-40">
         <div className="grid lg:grid-cols-2 gap-20 items-start">
           {/* left side */}
-          <div className="space-y-8">
+          <div className="space-y-8 mr-4">
             <div className="animate-glow inline-flex py-2 px-3 rounded-full items-center justify-center space-x-2 glass animate-fade-500 ">
               <span className="text-2xl ">Thabang Muleba</span>
             </div>
@@ -87,21 +82,17 @@ const Hero = () => {
             {/* CTA BUTTONS */}
             <div className="space-x-6 flex items-center">
               <Link to="/contact">
-                <Button
-                  size="large"
-                  className="hover:scale-110 transition-all duration-300"
-                >
+                <Button className="hover:scale-110 transition-all duration-300">
                   Contact Me
                   <FaArrowRight className="ml-3" />
                 </Button>
               </Link>
-
-              <Button
-                size="large"
-                className="hover:scale-110 transition-all duration-300"
-              >
-                <FaDownload className="mr-3" /> Download CV
-              </Button>
+              <a href="/CV of Thabang Muleba(E) (1).pdf" download>
+                {" "}
+                <Button className="hover:scale-110 transition-all duration-300">
+                  <FaDownload className="mr-3" /> Download CV
+                </Button>
+              </a>
             </div>
             {/* SOCIAL LINKS */}
             <div className="flex items-center space-x-5">
