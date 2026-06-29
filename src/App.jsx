@@ -3,7 +3,7 @@ import { Navbar } from "./layout/Navbar";
 import { About } from "../src/sections/About";
 import { Projects } from "../src/sections/Projects";
 import { Experience } from "../src/sections/Experience";
-import { Testimonials } from "../src/sections/Testimonials";
+
 import { Contact } from "../src/sections/Contact";
 import { Routes, Route } from "react-router";
 import Home from "./components/Home";
