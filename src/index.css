@@ -45,6 +45,20 @@
   }
 }
 
+@keyframes button-hover {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -120,6 +134,10 @@
 @layer utilities {
   .bg-btn-gradient {
     background: linear-gradient(135deg, #2563eb 0%, #4f46e5 50%, #7c3aed 100%);
+  }
+
+  .animate-btn {
+    animation: button-hover 3s ease-in-out infinite;
   }
 
   .animate-marquee {

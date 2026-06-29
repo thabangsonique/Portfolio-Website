@@ -16,6 +16,7 @@ import { Link } from "react-router-dom";
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
 
   //change navebar background apon scroll.
   useEffect(() => {
@@ -50,7 +51,7 @@ export const Navbar = () => {
           <HashLink
             smooth
             to="/#about"
-            className="p-2 text-muted-foreground hover:text-primary-foreground transition-all duration-300"
+            className="px-4 text-muted-foreground hover:text-primary-foreground transition-all duration-300"
           >
             About
           </HashLink>
@@ -67,26 +68,19 @@ export const Navbar = () => {
           >
             Experience
           </HashLink>
-          <HashLink
-            smooth
-            to="/#testimonials"
-            className="px-4 text-muted-foreground rounded-2xl py-3 hover:text-foreground hover:bg-secondary"
-          >
-            Testimonials
-          </HashLink>
-          {/* {NavLinks.map((nav, index) => (
-            <a
-              href={nav.href}
-              className="px-4 text-muted-foreground rounded-2xl py hover:text-foreground hover:bg-secondary"
-            >
-              {nav.label}
-            </a>
-          ))} */}
         </div>
 
         {/* CTA BUTTON */}
+
         <div className="hidden md:block">
-          <Button size="sm">Contact Me</Button>
+          <Link to="/contact">
+            <Button
+              size="sm"
+              className="hover:scale-110 transition-all duration-300"
+            >
+              Contact Me
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile menue */}
@@ -103,19 +97,46 @@ export const Navbar = () => {
 
       {isMenuOpen ? (
         <div className="glass md:hidden pb-6 animate-fade-400">
-          <div className="container px-6 flex flex-col py-8 gap-5">
-            {NavLinks.map((nav, index) => (
-              <a
-                href={nav.href}
-                className="py-2 text-muted-foreground hover:text-foreground"
-              >
-                {nav.label}
-              </a>
-            ))}
+          <div
+            className="container px-6 flex flex-col py-8 gap-5"
+            onClick={() => {
+              setIsClicked((prev) => !prev);
+              setIsMenuOpen(false);
+            }}
+          >
+            <HashLink
+              smooth
+              to="/#about"
+              className="px-4 text-muted-foreground hover:text-primary-foreground transition-all duration-300"
+            >
+              About
+            </HashLink>
+            <Link
+              to="/projects"
+              className="px-4 text-muted-foreground rounded-2xl py-3 hover:text-foreground hover:bg-secondary"
+            >
+              Projects
+            </Link>
+            <HashLink
+              smooth
+              to="/#experience"
+              className="px-4 text-muted-foreground rounded-2xl py-3 hover:text-foreground hover:bg-secondary"
+            >
+              Experience
+            </HashLink>
           </div>
 
           {/* BUTTON */}
-          <Button className="w-full ">Contact Me</Button>
+          <Link
+            to="/contact"
+            onClick={() => {
+              setIsClicked((prev) => !prev);
+              setIsMenuOpen(false);
+            }}
+          >
+            {" "}
+            <Button className="w-full ">Contact Me</Button>
+          </Link>
         </div>
       ) : null}
     </header>

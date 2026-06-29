@@ -6,6 +6,7 @@ import {
   FaExternalLinkAlt,
 } from "react-icons/fa";
 import { Button } from "../components/Button";
+import { Link } from "react-router-dom";
 
 const highlights = [
   {
@@ -39,6 +40,9 @@ const highlights = [
 export const About = () => {
   return (
     <section id="about" className="py-32 relative container overflow-hidden">
+      {/* BACKGROUND */}
+      <div className="absolute top-20 left-0 w-64 h-64 rounded-full bg-purple-900/40 blur-3xl" />
+      <div className="absolute top-80 right-30 w-100 h-100 bg-purple-900/10 blur-3xl" />
       <div className="container mx-auto px-6 md:px-30 relative grid md:grid-cols-2 gap-20">
         {/* Left section */}
         <div className="space-y-10">
@@ -100,9 +104,7 @@ export const About = () => {
             </div>
           </div>
         </div>
-
         {/* Right section HIGHLIGHTS */}
-
         <div className="grid md:grid-cols-2 gap-8 mt-20">
           {highlights.map((highlight, idx) => (
             <div key={idx} className="glass-strong rounded-2xl p-4 space-y-6 ">
@@ -115,12 +117,18 @@ export const About = () => {
             </div>
           ))}
         </div>
-
         {/* VIEW PROJECTS CTA */}
-        <Button size="large" className="p-6 flex w-70 justify-between">
-          <span>View Projects</span>
-          <FaExternalLinkAlt className="ml-20" />
-        </Button>
+        <Link to="/projects">
+          <Button
+            size="large"
+            className="p-6 flex w-70 justify-between group hover:scale-110 transition-all duration-300"
+          >
+            <span className="group-hover:text-primary-light">
+              View Projects
+            </span>
+            <FaExternalLinkAlt className="ml-20 group-hover:scale-150 transition-all duration-300" />
+          </Button>
+        </Link>
       </div>
     </section>
   );

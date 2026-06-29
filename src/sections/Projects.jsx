@@ -115,6 +115,7 @@ export const Projects = () => {
                     <div className="flex gap-6 group-hover:scale-110 transition-all duration-300">
                       <a
                         href={project.Github}
+                        target="_blank"
                         className="hover:scale-120 transition-all duration-300"
                       >
                         <FaGithub
@@ -124,6 +125,7 @@ export const Projects = () => {
                       </a>
                       <a
                         href={project.deploy}
+                        target="_blank"
                         className="hover:scale-120 transition-all duration-300"
                       >
                         <FaExternalLinkAlt

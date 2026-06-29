@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "../components/Button";
+import { Link } from "react-router-dom";
 import {
   FaDownload,
   FaArrowRight,
@@ -85,12 +86,20 @@ const Hero = () => {
             </div>
             {/* CTA BUTTONS */}
             <div className="space-x-6 flex items-center">
-              <Button size="large">
-                Contact Me
-                <FaArrowRight className="ml-3" />
-              </Button>
+              <Link to="/contact">
+                <Button
+                  size="large"
+                  className="hover:scale-110 transition-all duration-300"
+                >
+                  Contact Me
+                  <FaArrowRight className="ml-3" />
+                </Button>
+              </Link>
 
-              <Button size="large">
+              <Button
+                size="large"
+                className="hover:scale-110 transition-all duration-300"
+              >
                 <FaDownload className="mr-3" /> Download CV
               </Button>
             </div>
@@ -103,10 +112,13 @@ const Hero = () => {
               {/* social links */}
               <div className="flex space-x-5 ">
                 {[
-                  { icon: FaGithub, href: "#" },
-                  { icon: FaLinkedin, href: "#" },
+                  { icon: FaGithub, href: "https://github.com/thabangsonique" },
+                  {
+                    icon: FaLinkedin,
+                    href: "https://www.linkedin.com/in/thabang-muleba-2aa9aa20a/",
+                  },
                 ].map((social, idx) => (
-                  <a key={idx} href={social.href}>
+                  <a key={idx} href={social.href} target="_blank">
                     <social.icon
                       size={30}
                       className="transition-all duration-300 hover:scale-110 "
