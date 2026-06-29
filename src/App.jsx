@@ -5,20 +5,18 @@ import { Projects } from "../src/sections/Projects";
 import { Experience } from "../src/sections/Experience";
 import { Testimonials } from "../src/sections/Testimonials";
 import { Contact } from "../src/sections/Contact";
+import { Routes, Route } from "react-router";
+import Home from "./components/Home";
 
 function App() {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <Navbar />
 
-      <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Experience />
-        <Testimonials />
-        <Contact />
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+      </Routes>
     </div>
   );
 }

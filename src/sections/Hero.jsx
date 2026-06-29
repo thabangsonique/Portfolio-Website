@@ -1,6 +1,12 @@
 import React from "react";
 import { Button } from "../components/Button";
-import { FaDownload, FaArrowRight, FaGithub, FaLinkedin } from "react-icons/fa";
+import {
+  FaDownload,
+  FaArrowRight,
+  FaGithub,
+  FaLinkedin,
+  FaChevronDown,
+} from "react-icons/fa";
 
 const skills = [
   "HTML",
@@ -24,7 +30,10 @@ const skills = [
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden items-center min-h-screen">
+    <section
+      id="hero"
+      className="relative overflow-hidden items-center min-h-screen"
+    >
       {/* bg */}
       {/* <div className="absolute inset-0">
         <img src="/space.jpg" className="w-full h-full object-cover" />
@@ -51,12 +60,12 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-20 items-start">
           {/* left side */}
           <div className="space-y-8">
-            <div className="inline-flex py-2 px-3 rounded-full items-center justify-center space-x-2 glass ">
+            <div className="animate-glow inline-flex py-2 px-3 rounded-full items-center justify-center space-x-2 glass animate-fade-500 ">
               <span className="text-2xl ">Thabang Muleba</span>
             </div>
             {/*headline contents */}
             <div className="space-y-10">
-              <h1 className="bg-gradient-to-r from-purple-800 via-blue-200 to-white bg-clip-text text-transparent text-5xl md:text-6xl lg:text-7xl font-bold tracking-wider">
+              <h1 className="animate-fade-700 bg-gradient-to-r from-purple-800 via-blue-200 to-white bg-clip-text text-transparent text-5xl md:text-6xl lg:text-7xl font-bold tracking-wider">
                 Full-Stack <br />
                 <span className="font-serif italic tracking-tight font-normal  text-white">
                   Web Developer
@@ -65,7 +74,7 @@ const Hero = () => {
 
               {/* Creating responsive, full-stack applications that solve real-world problems. */}
 
-              <p className="text-muted-foreground max-w-lg">
+              <p className="animate-fade-800 text-muted-foreground max-w-lg">
                 Hi, I am Thabang Muleba — a Full-Stack Developer specializing in
                 building end-to-end web applications. From crafting intuitive
                 frontend experiences to designing backend services and APIs, I
@@ -109,21 +118,25 @@ const Hero = () => {
           </div>
 
           {/* Right side */}
-          <div>
+          <div className="overflow-hidden rounded-full w-72 h-72 md:w-100 md:h-100 lg:w-150 lg:h-150 mx-auto -mt-4 md:-mt-8 lg:-mt-10">
             {/* my profile image */}
-            <img />
+            <img
+              src="/my-image-4.png"
+              alt="Profile image"
+              className="profile-image w-full h-full object-cover"
+            />
           </div>
         </div>
 
         {/* tech stack SCROLLVIEW SECTION */}
-        <div className="text-center pt-20">
+        <div className="relative text-center pt-20">
           <span className="text-muted-foreground">
             Technologies I work with:
           </span>
 
           <div className="overflow-hidden pt-10 text-muted-foreground">
             {" "}
-            <div className="flex whitespace-nowrap animate-marquee">
+            <div className="flex whitespace-nowrap animate-marquee mb-30">
               {[...skills, ...skills].map((skill, idx) => (
                 <div key={idx} className="text-xl mx-6">
                   <span className="hover:text-primary-foreground transition-all duration-300">
@@ -132,10 +145,17 @@ const Hero = () => {
                 </div>
               ))}{" "}
             </div>
-            {/* scroll icon */}
-            <div>
-              <span className="uppercase">scroll</span>
-            </div>
+          </div>
+
+          {/* scroll icon */}
+          <div className="absolute left-1/2 -translate-x-1/2 bottom-8">
+            <a className="flex flex-col items-center text-muted-foreground group">
+              <span className="uppercase hover:text-primary-foreground group-hover:hover:scale-110 transition-all duration-300">
+                scroll
+              </span>
+
+              <FaChevronDown className="group-hover:translate-y-2 transition-all duration-300 animate-bounce" />
+            </a>
           </div>
         </div>
       </div>
