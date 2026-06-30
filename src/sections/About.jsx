@@ -41,7 +41,7 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="py-32 mx-auto relative container overflow-hidden"
+      className="py-6 md:mt-0 mx-auto relative container overflow-hidden"
     >
       {/* BACKGROUND */}
       <div className="absolute top-20 left-20 w-64 h-64 rounded-full bg-purple-900/40 blur-3xl" />
